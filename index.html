@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Strength Checker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Password Strength Checker</h1>
+      <input type="password" id="password" placeholder="Enter your password" />
+      <label for="showPassword">Show Password:</label>
+      <input
+        type="checkbox"
+        id="showPassword"
+        onchange="togglePasswordVisibility()"
+      />
+      <br />
+      <label for="customMinLength">Minimum Length:</label>
+      <input type="number" id="customMinLength" min="1" value="10" />
+      <label for="customUpperCase">Minimum Uppercase Characters:</label>
+      <input type="number" id="customUpperCase" min="0" value="2" />
+      <label for="customSpecialChars">Minimum Special Characters:</label>
+      <input type="number" id="customSpecialChars" min="0" value="2" />
+      <label for="customMinNumbers">Minimum Numbers:</label>
+      <input type="number" id="customMinNumbers" min="0" value="1" />
+      <button onclick="checkPassword()">Check Password</button>
+      <button onclick="refreshPage()">Refresh</button>
+      <!-- New button for refreshing the page -->
+      <div id="result"></div>
+      <div id="complexity"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
